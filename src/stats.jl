@@ -255,7 +255,7 @@ end
 
 function margin_error(sol::CurveFitSolution, alpha=0.05; rtol::Real=NaN, atol::Real=0)
     std_errors = stderror(sol; rtol=rtol, atol=atol)
-    dist = TDist(dof(sol))
+    dist = TDist(dof_residual(sol))
     critical_values = quantile(dist, 1 - alpha / 2)
     return std_errors * critical_values
 end

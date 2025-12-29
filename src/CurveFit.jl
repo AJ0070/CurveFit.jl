@@ -47,7 +47,7 @@ export CurveFitSolution
 
 export solve, solve!, init
 
-export coef, residuals, predict, fitted, nobs, dof, dof_residual, rss, mse, vcov, stderror, confint
+export coef, residuals, predict, fitted, nobs, dof, dof_residual, rss, mse, vcov, stderror, confint, margin_error
 export isconverged
 
 end
